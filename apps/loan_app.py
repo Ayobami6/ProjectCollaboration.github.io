@@ -7,6 +7,6 @@ import time
 
 def app():
   # App Header
-st.markdown('''# **Loan Application Prediction**
-A Machine Learning Prediction Web App.
-''')
+  st.markdown('''# **Loan Application Prediction**
+  A Machine Learning Prediction Web App.
+  ''')
