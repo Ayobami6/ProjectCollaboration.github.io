@@ -10,7 +10,7 @@ def app():
        st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">',
             unsafe_allow_html=True)
        st.markdown("""
-       <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #291720;">
+       <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #260C1A;">
         <a class="navbar-brand" href="https://bit.ly/pinkdatahub" target="_blank">Pink Data Hub</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
