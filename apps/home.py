@@ -6,21 +6,7 @@ import time
 
 
 def app():
-       # Image For Page
-       file_ = open("image1.png", "rb")
-       contents = file_.read()
-       data_url = base64.b64encode(contents).decode("utf-8")
-       file_.close()
-
-       st.markdown(
-       f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
-       unsafe_allow_html=True
-       )
-
-
-       # Styling side bar with image
-       st.sidebar.image("image.gif", use_column_width=True)
-       # Adding Nav Bar
+      # Adding Nav Bar
        st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">',
             unsafe_allow_html=True)
        st.markdown("""
@@ -48,7 +34,18 @@ def app():
        </nav>
        """, unsafe_allow_html=True)
        
+       # Image For Page
+       file_ = open("image1.png", "rb")
+       contents = file_.read()
+       data_url = base64.b64encode(contents).decode("utf-8")
+       file_.close()
+
+       st.markdown(
+       f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
+       unsafe_allow_html=True
+       )
        
+        st.sidebar.image("image.gif", use_column_width=True)
        
        
        
