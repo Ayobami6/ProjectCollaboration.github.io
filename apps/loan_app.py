@@ -1,4 +1,5 @@
 import streamlit as st
+from st_aggrid import AgGrid
 import pandas as pd
 import datetime
 import base64
@@ -25,3 +26,28 @@ def app():
        # Side Note 1
        expander_1 = st.expander("PLEASE READ BEFORE YOU BEGIN")
        expander_1.markdown("""<b>This App is built to predict Loan Approval Of Customers and To Predict Customeer  </b>. """, unsafe_allow_html=True)
+         
+       # Upload File
+       with st.sidebar:
+              df = st.file_uploader("Upload your file: ", type=['pickle'])
+         
+       try:
+        df = pd.read_pickle(df)
+        st.markdown("Your Data Record: ")
+        AgGrid(df, editable=True)
+       except:
+         pass  
+      
+       forms = st.form("forms", clear_on_submit=True)
+       loan_type = forms.radio('Loan Term', ['Short Term Loan', 'Long Term Loan'])
+       credit_score = forms.text_input('Credit Score')
+       income = forms.text_input('Annual Income')
+       years = forms.text_input('Number Of Years In Current Job')
+       home = forms.radio('Home Ownership', ['Owned', 'Rented Apartment'])
+       debt = forms.text_input('Monthly Debt')
+       credit = forms.text_input('Maximum Open Credit')
+       accounts = forms.text_input('Number Of Open Accounts')
+       submit = forms.form_submit_button('Submit')
+        
+       if submit:
+            st.success("Submitted Successful")
