@@ -28,7 +28,8 @@ def app():
        expander_1.markdown("""<b>This App is built to predict Loan Approval Of Customers and To Predict Customeer  </b>. """, unsafe_allow_html=True)
          
        # Upload File
-       df = st.file_uploader("Upload your file: ", type=['pickle'])
+       with st.sidebar:
+              df = st.file_uploader("Upload your file: ", type=['pickle'])
          
        try:
         df = pd.read_pickle(df)
