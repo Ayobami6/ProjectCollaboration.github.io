@@ -33,6 +33,34 @@ def app():
           </div>
        </nav>
        """, unsafe_allow_html=True)
+       
+       # Image For Page
+       file_ = open("image_1.png", "rb")
+       contents = file_.read()
+       data_url = base64.b64encode(contents).decode("utf-8")
+       file_.close()
+
+       st.markdown(
+       f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
+       unsafe_allow_html=True
+       )
+
+
+       # Styling side bar with image
+       st.sidebar.image("image.gif", use_column_width=True)
+       
+       
+       
+       st.write("GitHub Page [link](https://github.com/Designegycreatives/web_app.py)")
+
+
+       # Side Notes For Guides
+
+       # Side Note 1
+       expander_1 = st.expander("PLEASE READ BEFORE YOU BEGIN")
+       expander_1.markdown("""<b>This App</b> has been designed out of passion to 
+       make <b>business intelligence</b> simple, easy, and efficient for business owners
+       with <b>no business analysis experience</b>. """, unsafe_allow_html=True)
 
 
 
