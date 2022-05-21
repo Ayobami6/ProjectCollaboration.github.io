@@ -48,5 +48,7 @@ def app():
        credit = forms.text_input('Maximum Open Credit')
        accounts = forms.text_input('Number Of Open Accounts')
        submit = forms.form_submit_button('Submit')
-         
+        
+       if submit:
+            st.success("Submitted Successful")
       
