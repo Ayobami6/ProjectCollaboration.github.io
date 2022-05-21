@@ -48,7 +48,7 @@ def app():
       
        
        
-       st.write("GitHub Page [link](https://github.com/Designegycreatives/web_app.py)")
+       st.write("Welcome To Our Loan Prediction App")
 
 
        # Side Notes For Guides
