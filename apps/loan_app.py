@@ -1,4 +1,5 @@
 import streamlit as st
+from st_aggrid import 
 import pandas as pd
 import datetime
 import base64
@@ -25,4 +26,14 @@ def app():
        # Side Note 1
        expander_1 = st.expander("PLEASE READ BEFORE YOU BEGIN")
        expander_1.markdown("""<b>This App is built to predict Loan Approval Of Customers and To Predict Customeer  </b>. """, unsafe_allow_html=True)
+         
+       # Upload File
+       df = st.file_uploader("Upload your file: ", type=['pickle'])
+         
+       try:
+        df = pd.read_pickle(df)
+        st.markdown("Your Data Record: ")
+        AgGrid(df, editable=True)
+    except:
+        pass  
 
