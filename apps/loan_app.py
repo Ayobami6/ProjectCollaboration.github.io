@@ -38,5 +38,15 @@ def app():
        except:
          pass  
       
-       form = st.selectbox("choose", ('Form'))
-
+       forms = st.form("forms", clear_on_submit=True)
+       loan_type = forms.radio('Loan Term', ['Short Term Loan', 'Long Term Loan'])
+       credit_score = forms.text_input('Credit Score')
+       income = forms.text_input('Annual Income')
+       years = forms.text_input('Number Of Years In Current Job')
+       home = forms.radio('Home Ownership', ['Owned', 'Rented Apartment'])
+       debt = forms.text_input('Monthly Debt')
+       credit = forms.text_input('Maximum Open Credit')
+       accounts = forms.text_input('Number Of Open Accounts')
+       submit = forms.form_submit_button('Submit')
+         
+      
