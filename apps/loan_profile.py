@@ -4,6 +4,9 @@ import pandas as pd
 import datetime
 import base64
 import time
+import plotly.express as px
+import numpy as np
+
 
 
 def app():
@@ -30,6 +33,15 @@ def app():
       # Upload File
        with st.sidebar:
               df = st.file_uploader("Upload your file: ", type=['pickle'])
+               
+       try:
+        cols = st.selectbox('SELECT VALUE:',
+                            options=df_file.select_dtypes(include=['int', 'float', 'datetime'], exclude='object').columns)
+        cols2 = st.selectbox('SELECT LABEL:',
+                             options=df_file.select_dtypes(include='object', exclude=['int', 'float']).columns)
+        df_file = df_file.groupby(df_file[cols2])[cols].sum().nlargest(n=10).reset_index()
+       except:
+         pass
          
        try:
         df = pd.read_pickle(df)
