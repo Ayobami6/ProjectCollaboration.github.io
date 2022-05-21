@@ -35,6 +35,6 @@ def app():
         df = pd.read_pickle(df)
         st.markdown("Your Data Record: ")
         AgGrid(df, editable=True)
-    except:
-        pass  
+       except:
+         pass  
 
