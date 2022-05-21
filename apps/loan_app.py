@@ -37,4 +37,6 @@ def app():
         AgGrid(df, editable=True)
        except:
          pass  
+      
+       form = st.selectbox("choose", ('Form'))
 
