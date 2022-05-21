@@ -6,3 +6,4 @@ pillow== 9.1.0
 plotly-express
 pillow-PIL
 click<=8.0
+plotly==5.2.1
