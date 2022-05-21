@@ -48,7 +48,7 @@ def app():
       
        
        
-       st.write("Welcome To Our Loan Prediction App")
+       st.header("Welcome To Our Loan Prediction App")
 
 
        # Side Notes For Guides
