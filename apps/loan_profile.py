@@ -39,7 +39,7 @@ def app():
                             options=df_file.select_dtypes(include=['int', 'float', 'datetime'], exclude='object').columns)
         cols2 = st.selectbox('SELECT LABEL:',
                              options=df_file.select_dtypes(include='object', exclude=['int', 'float']).columns)
-        df_file = df_file.groupby(df_file[cols2])[cols].sum().nlargest(n=10).reset_index()
+        df_file = df_file.groupby(df_file[cols2])[cols].sum().reset_index()
        except:
          pass
          
@@ -48,5 +48,29 @@ def app():
         st.markdown("Your Data Record: ")
         AgGrid(df, editable=True)
        except:
-         pass  
-
+         pass
+     # Setting Checkbox Menu
+    type = st.sidebar.radio("Pick one", ['Color', 'No Color'])
+       if type == 'Color':
+           plotType_color = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
+         if plotType_color == 'Line':
+            fig = px.line(df_file, x=df_file[cols2], y=df_file[cols])
+            st.plotly_chart(fig, use_container_width=True)
+         if plotType_color == 'Pie':
+            fig = px.pie(names=df_file[cols2], values=df_file[cols])
+            st.plotly_chart(fig, use_container_width=True)
+         if plotType_color == 'Bar':
+            fig = px.bar(df_file, x=df_file[cols2], y=df_file[cols], color=df_file[cols2])
+            st.plotly_chart(fig, use_container_width=True)
+            
+       if type == 'No Color':
+        plotType_nocolor = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
+         if plotType_nocolor == 'Line':
+            fig = px.line(df_file, x=df_file[cols2], y=df_file[cols])
+            st.plotly_chart(fig, use_container_width=True)
+         if plotType_nocolor == 'Pie':
+            fig = px.pie(names=df_file[cols2], values=df_file[cols])
+            st.plotly_chart(fig, use_container_width=True)
+         if plotType_nocolor == 'Bar':
+            fig = px.bar(df_file, x=df_file[cols2], y=df_file[cols])
+            st.plotly_chart(fig, use_container_width=True)
