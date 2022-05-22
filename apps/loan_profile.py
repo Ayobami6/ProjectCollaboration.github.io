@@ -50,7 +50,7 @@ def app():
        except:
          pass
      # Setting Checkbox Menu
-    type = st.sidebar.radio("Pick one", ['Color', 'No Color'])
+       type = st.sidebar.radio("Pick one", ['Color', 'No Color'])
        if type == 'Color':
            plotType_color = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
          if plotType_color == 'Line':
