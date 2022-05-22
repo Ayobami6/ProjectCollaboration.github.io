@@ -36,10 +36,10 @@ def app():
                
        try:
         cols = st.selectbox('SELECT VALUE:',
-                            options=df_file.select_dtypes(include=['int', 'float', 'datetime'], exclude='object').columns)
+                            options=df.select_dtypes(include=['int', 'float', 'datetime'], exclude='object').columns)
         cols2 = st.selectbox('SELECT LABEL:',
-                             options=df_file.select_dtypes(include='object', exclude=['int', 'float']).columns)
-        df_file = df_file.groupby(df_file[cols2])[cols].sum().reset_index()
+                             options=df.select_dtypes(include='object', exclude=['int', 'float']).columns)
+        df = df.groupby(df[cols2])[cols].sum().reset_index()
        except:
          pass
          
