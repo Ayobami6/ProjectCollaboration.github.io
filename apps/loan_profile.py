@@ -4,6 +4,9 @@ import pandas as pd
 import datetime
 import base64
 import time
+import plotly.express as px
+import numpy as np
+
 
 
 def app():
@@ -30,10 +33,44 @@ def app():
       # Upload File
        with st.sidebar:
               df = st.file_uploader("Upload your file: ", type=['pickle'])
+               
+       try:
+        cols = st.selectbox('SELECT VALUE:',
+                            options=df.select_dtypes(include=['int', 'float', 'datetime'], exclude='object').columns)
+        cols2 = st.selectbox('SELECT LABEL:',
+                             options=df.select_dtypes(include='object', exclude=['int', 'float']).columns)
+        df = df.groupby(df[cols2])[cols].sum().reset_index()
+       except:
+         pass
          
        try:
         df = pd.read_pickle(df)
         st.markdown("Your Data Record: ")
         AgGrid(df, editable=True)
        except:
-         pass  
+         pass
+     # Setting Checkbox Menu
+       type = st.sidebar.radio("Pick one", ['Color', 'No Color'])
+       if type == 'Color':
+           plotType_color = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
+           if plotType_color == 'Line':
+             fig = px.line(df, x=df[cols2], y=df[cols])
+             st.plotly_chart(fig, use_container_width=True)
+           if plotType_color == 'Pie':
+             fig = px.pie(names=df[cols2], values=df[cols])
+             st.plotly_chart(fig, use_container_width=True)
+           if plotType_color == 'Bar':
+             fig = px.bar(df, x=df[cols2], y=df[cols], color=df[cols2])
+             st.plotly_chart(fig, use_container_width=True)
+            
+       if type == 'No Color':
+           plotType_nocolor = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
+           if plotType_nocolor == 'Line':
+             fig = px.line(df, x=df[cols2], y=df[cols])
+             st.plotly_chart(fig, use_container_width=True)
+           if plotType_nocolor == 'Pie':
+             fig = px.pie(names=df[cols2], values=df[cols])
+             st.plotly_chart(fig, use_container_width=True)
+           if plotType_nocolor == 'Bar':
+             fig = px.bar(df, x=df[cols2], y=df[cols])
+             st.plotly_chart(fig, use_container_width=True)
