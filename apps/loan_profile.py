@@ -54,23 +54,23 @@ def app():
        if type == 'Color':
            plotType_color = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
          if plotType_color == 'Line':
-            fig = px.line(df_file, x=df_file[cols2], y=df_file[cols])
+            fig = px.line(df, x=df[cols2], y=df[cols])
             st.plotly_chart(fig, use_container_width=True)
          if plotType_color == 'Pie':
-            fig = px.pie(names=df_file[cols2], values=df_file[cols])
+            fig = px.pie(names=df[cols2], values=df[cols])
             st.plotly_chart(fig, use_container_width=True)
          if plotType_color == 'Bar':
-            fig = px.bar(df_file, x=df_file[cols2], y=df_file[cols], color=df_file[cols2])
+            fig = px.bar(df, x=df[cols2], y=df[cols], color=df[cols2])
             st.plotly_chart(fig, use_container_width=True)
             
        if type == 'No Color':
         plotType_nocolor = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
          if plotType_nocolor == 'Line':
-            fig = px.line(df_file, x=df_file[cols2], y=df_file[cols])
+            fig = px.line(df, x=df[cols2], y=df[cols])
             st.plotly_chart(fig, use_container_width=True)
          if plotType_nocolor == 'Pie':
-            fig = px.pie(names=df_file[cols2], values=df_file[cols])
+            fig = px.pie(names=df[cols2], values=df[cols])
             st.plotly_chart(fig, use_container_width=True)
          if plotType_nocolor == 'Bar':
-            fig = px.bar(df_file, x=df_file[cols2], y=df_file[cols])
+            fig = px.bar(df, x=df[cols2], y=df[cols])
             st.plotly_chart(fig, use_container_width=True)
