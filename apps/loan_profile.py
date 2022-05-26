@@ -26,43 +26,12 @@ def app():
        A Machine Learning Prediction Web App.
        ''')
   
-      # Upload File
-       with st.sidebar:
-              df = st.file_uploader("Upload your file: ", type=['pickle'])
-               
+     
        try:
         st.text_input("Enter Customer's ID")
        except:
          pass
-         
-       try:
-        df = pd.read_pickle(df)
-        st.markdown("Your Data Record: ")
-        AgGrid(df, editable=True)
-       except:
-         pass
-     # Setting Checkbox Menu
-       type = st.sidebar.radio("Pick one", ['Color', 'No Color'])
-       if type == 'Color':
-           plotType_color = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
-           if plotType_color == 'Line':
-             fig = px.line(df, x=df[cols2], y=df[cols])
-             st.plotly_chart(fig, use_container_width=True)
-           if plotType_color == 'Pie':
-             fig = px.pie(names=df[cols2], values=df[cols])
-             st.plotly_chart(fig, use_container_width=True)
-           if plotType_color == 'Bar':
-             fig = px.bar(df, x=df[cols2], y=df[cols], color=df[cols2])
-             st.plotly_chart(fig, use_container_width=True)
-            
-       if type == 'No Color':
-           plotType_nocolor = st.sidebar.selectbox("Plot Type:", ['Choose', 'Line', 'Bar', 'Pie'])
-           if plotType_nocolor == 'Line':
-             fig = px.line(df, x=df[cols2], y=df[cols])
-             st.plotly_chart(fig, use_container_width=True)
-           if plotType_nocolor == 'Pie':
-             fig = px.pie(names=df[cols2], values=df[cols])
-             st.plotly_chart(fig, use_container_width=True)
-           if plotType_nocolor == 'Bar':
-             fig = px.bar(df, x=df[cols2], y=df[cols])
-             st.plotly_chart(fig, use_container_width=True)
+      
+       options = st.selectbox('Explore Customer Loan Records:',
+                              ('Choose','Customer Details', 'Loan Details', 'Credit Score Details'))
+      
