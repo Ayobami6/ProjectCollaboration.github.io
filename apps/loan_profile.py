@@ -11,22 +11,7 @@ from apps import loan_app
 
 
 def app():
-   # Image For Page
-       file_ = open("image1.jpg", "rb")
-       contents = file_.read()
-       data_url = base64.b64encode(contents).decode("utf-8")
-       file_.close()
-
-       st.markdown(
-       f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
-       unsafe_allow_html=True
-       )
-       
-       # App Header
-       st.markdown('''# **Customer Loan Profile**
-       A Machine Learning Prediction Web App.
-       ''')
-         
+  
         # Upload File
        with st.sidebar:
               df = st.file_uploader("Upload your file: ", type=['pickle'])
