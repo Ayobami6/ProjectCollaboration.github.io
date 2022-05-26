@@ -23,10 +23,7 @@ def app():
        A Machine Learning Prediction Web App.
        ''')
   
-       # Side Note 1
-       expander_1 = st.expander("PLEASE READ BEFORE YOU BEGIN")
-       expander_1.markdown("""<b>This App is built to predict Loan Approval Of Customers and To Predict Customeer  </b>. """, unsafe_allow_html=True)
-         
+       
        # Upload File
        with st.sidebar:
               df = st.file_uploader("Upload your file: ", type=['pickle'])
@@ -47,8 +44,8 @@ def app():
        debt = forms.text_input('Monthly Debt')
        credit = forms.text_input('Maximum Open Credit')
        accounts = forms.text_input('Number Of Open Accounts')
-       submit = forms.form_submit_button('Submit')
+       submit = forms.form_submit_button('Predict Loan Output')
         
        if submit:
-            st.success("Submitted Successful")
+            st.success("Prediction in process....")
       
