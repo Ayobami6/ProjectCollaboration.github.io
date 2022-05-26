@@ -6,7 +6,7 @@ import base64
 import time
 import plotly.express as px
 import numpy as np
-
+from apps import loan_app
 
 
 def app():
