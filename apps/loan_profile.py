@@ -36,9 +36,12 @@ def app():
                
        try:
         cols = st.selectbox('SELECT VALUE:',
-                            options=df.select_dtypes(include=['int', 'float', 'datetime'], exclude='object').columns)
-        cols2 = st.selectbox('SELECT LABEL:',
-                             options=df.select_dtypes(include='object', exclude=['int', 'float']).columns)
+                            options=df.groupby(['Loan ID', 'Customer ID']).columns)
+        cols2 = st.multiselect('SELECT LABEL:',
+                             options=df.groupby(['Annual Income', 'Years in current job', 'Home Ownership', 'Purpose', 'Number of Open Accounts',
+                                                'Tax_Liens', 'Credit Score', 'Years of Credit History', 'Months since last delinquent',
+                                                'Number of Credit Problems', 'Current Credit Balance', 'Maximum Open Credit',
+                                                'Bankruptcies', 'Loan Status', 'Current Loan Amount', 'Term', 'Monthly_Debt']).columns)
         df = df.groupby(df[cols2])[cols].sum().reset_index()
        except:
          pass
