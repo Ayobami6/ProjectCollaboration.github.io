@@ -25,6 +25,10 @@ def app():
        st.markdown('''# **Customer Loan Profile**
        A Machine Learning Prediction Web App.
        ''')
+         
+        # Upload File
+       with st.sidebar:
+              df = st.file_uploader("Upload your file: ", type=['pickle'])
   
      
        try:
