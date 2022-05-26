@@ -5,8 +5,7 @@ import datetime
 import base64
 import time
 
-
- def app(): 
+def app(): 
        # App Header
        st.markdown('''# **Loan Application Prediction**
        A Machine Learning Prediction Web App.
