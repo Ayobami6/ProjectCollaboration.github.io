@@ -26,23 +26,12 @@ def app():
        A Machine Learning Prediction Web App.
        ''')
   
-       # Side Note 1
-       expander_1 = st.expander("PLEASE READ BEFORE YOU BEGIN")
-       expander_1.markdown("""<b>This App is built to predict Loan Approval Of Customers and To Predict Customeer  </b>. """, unsafe_allow_html=True)
-       
       # Upload File
        with st.sidebar:
               df = st.file_uploader("Upload your file: ", type=['pickle'])
                
        try:
-        cols = st.selectbox('SELECT VALUE:',
-                            options=df.groupby(['Loan ID', 'Customer ID'])
-        cols2 = st.selectbox('SELECT LABEL:',
-                             options=df.groupby(['Annual Income', 'Years in current job', 'Home Ownership', 'Purpose', 'Number of Open Accounts',
-                                                'Tax_Liens', 'Credit Score', 'Years of Credit History', 'Months since last delinquent',
-                                                'Number of Credit Problems', 'Current Credit Balance', 'Maximum Open Credit',
-                                                'Bankruptcies', 'Loan Status', 'Current Loan Amount', 'Term', 'Monthly_Debt'])
-        df = df.groupby(df[cols2])[cols].sum().reset_index()
+        st.text_input("Enter Customer's ID")
        except:
          pass
          
