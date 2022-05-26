@@ -37,8 +37,8 @@ def app():
        try:
         cols = st.selectbox('SELECT VALUE:',
                             options=df.groupby(['Loan ID', 'Customer ID'])
-        cols2 = st.multiselect('SELECT LABEL:',
-                             df.groupby(['Annual Income', 'Years in current job', 'Home Ownership', 'Purpose', 'Number of Open Accounts',
+        cols2 = st.selectbox('SELECT LABEL:',
+                             options=df.groupby(['Annual Income', 'Years in current job', 'Home Ownership', 'Purpose', 'Number of Open Accounts',
                                                 'Tax_Liens', 'Credit Score', 'Years of Credit History', 'Months since last delinquent',
                                                 'Number of Credit Problems', 'Current Credit Balance', 'Maximum Open Credit',
                                                 'Bankruptcies', 'Loan Status', 'Current Loan Amount', 'Term', 'Monthly_Debt'])
