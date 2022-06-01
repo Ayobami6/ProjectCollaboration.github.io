@@ -1,9 +1,13 @@
 import streamlit as st
 from st_aggrid import AgGrid
 import pandas as pd
+import pickle
 import datetime
 import base64
 import time
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
 
 def app(): 
        # App Header
@@ -16,12 +20,10 @@ def app():
        with st.sidebar:
               df = st.file_uploader("Upload your file: ", type=['pickle'])
          
-       try:
-        df = pd.read_pickle(df)
-        st.markdown("Your Data Record: ")
-        AgGrid(df, editable=True)
-       except:
-         pass  
+              if df is None:
+                     df = pd.read_pickle(df)
+              else:
+                     df = pd.read_pickle('pred.sav') 
       
        forms = st.form("forms", clear_on_submit=True)
        loan_type = forms.radio('Loan Term', ['Short Term Loan', 'Long Term Loan'])
