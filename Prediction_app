@@ -6,4 +6,5 @@ trained_model = pickle.load(open('C:/Users/Ayo/Desktop/Collaboration/ProjectColl
 def main():
     st.title('Loan Defualters Prediction')
 
+    # input data
     
