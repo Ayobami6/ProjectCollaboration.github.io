@@ -1,0 +1,4 @@
+import streamlit as st
+import pickle 
+
+trained_model = pickle.load(open('C:/Users/Ayo/Desktop/Collaboration/ProjectCollaboration.github.io/trained_model_Loan_Pred.sav', 'rb'))
