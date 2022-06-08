@@ -17,9 +17,10 @@ def generateprediction(data):
     else:
         return 'The Customer will default'
 
-
+# Creating a function for main app interface
 def main():
     st.title('Loan Defualters Prediction')
+    st.subheader('This is the beta version')
 
     # input data
 
