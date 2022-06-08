@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 class MultiApp:
     """ Combining Streamlit Application
     Usage:
@@ -19,6 +20,7 @@ Keeping application in seperate file
       app.add_app("Bar", bar.app)
       app.run()
     """
+
     def __init__(self):
         self.apps = []
 
@@ -31,10 +33,11 @@ Keeping application in seperate file
         title:
            title of app at drop down side bar
         """
-        self.apps.append({
-            "title": title,
-            "function": func
-        })
+        self.apps.append(
+            {
+                "title": title,
+                "function": func
+            })
 
     def run(self):
         app = st.sidebar.radio(
