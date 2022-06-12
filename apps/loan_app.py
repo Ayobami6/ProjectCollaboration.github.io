@@ -6,6 +6,10 @@ import base64
 import time
 import pickle
 
+st.markdown("Loan Prediction App ")
+st.sidebar.markdown(("💳 Loan Prediction Page")
+
+
 trained_model = pickle.load(open(
     'C:/Users/Ayo/Downloads/trained_model_Loan_Pred.pkl', 'rb'))
 
