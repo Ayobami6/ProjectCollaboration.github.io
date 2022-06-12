@@ -1,15 +1,16 @@
 import streamlit as st
-import pandas as pd
-import base64
-import datetime
-import time
 
 
-def app():
-      # Adding Nav Bar
-       st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">',
+st.markdown("Loan Prediction App ")
+st.sidebar.markdown(("💳 Home Page")
+
+
+
+
+# Adding Nav Bar
+st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">',
             unsafe_allow_html=True)
-       st.markdown("""
+st.markdown("""
        <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #260C1A;">
         <a class="navbar-brand" href="https://bit.ly/pinkdatahub" target="_blank">Pink Data Hub</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false aria-label="Toggle navigation">
@@ -33,19 +34,19 @@ def app():
           </div>
        </nav>
        """, unsafe_allow_html=True)
-       
-       # Image For Page
-       file_ = open("image1.jpg", "rb")
-       contents = file_.read()
-       data_url = base64.b64encode(contents).decode("utf-8")
-       file_.close()
+  
+                    
+# Image For Page
+file_ = open("image1.jpg", "rb")
+contents = file_.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
 
-       st.markdown(
-       f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
-       unsafe_allow_html=True
-       )
+st.markdown(
+     f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
+     unsafe_allow_html=True
+     )
        
       
        
-       
-       st.header("Welcome To Our Loan Prediction App")
+     
