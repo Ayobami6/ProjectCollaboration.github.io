@@ -7,8 +7,7 @@ st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
 
 
-# trained_model = pickle.load(open(
-# 'trained_model_Loan_Pred.pkl', 'rb'))
+trained_model = pickle.load(open('data/trained_model_Loan_Pred.pkl', 'rb'))
 
 # creating function to make prediction
 
