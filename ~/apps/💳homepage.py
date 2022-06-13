@@ -1,5 +1,5 @@
 import streamlit as st
-
+import base64
 
 
 st.header("Loan Prediction App ")
