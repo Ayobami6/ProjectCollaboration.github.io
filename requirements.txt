@@ -8,6 +8,4 @@ pillow-PIL
 click<=8.0
 plotly==5.2.1
 pickle-mixin
-sklearn
-matplotlib
-seaborn
+pickle
