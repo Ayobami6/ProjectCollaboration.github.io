@@ -15,7 +15,7 @@ image = Image.open('image.png')
 st.image(image, caption='Prediction WebApp')
 
 expander_1 = st.expander("ABOUT WEBAPP")
-expander_1.markdown("""<b>This Web Application </b> Can Predict Which Customer Can 
+expander_1.markdown("""<b>This Web Application </b> Can Predict If a Customer Can 
 <b> Repay Or Default On Their Loans</b>. \n  We created this webapp to help <b> reduce the high rate of loan defaults </b> in the financial sector. """, unsafe_allow_html=True)
 
 trained_model = pickle.load(
