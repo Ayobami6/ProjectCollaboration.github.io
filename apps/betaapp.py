@@ -6,9 +6,9 @@ from PIL import Image
 
 st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
-st.sidebar.write("Ayobami's Page") 
-img = Image.open('image_1.png')
-st.sidebar.button(st.image(img))
+
+# Adding Github pages
+st.sidebar.markdown("[![Ayobami's Page](image_1.png)](https://github.com/Ayobami6)
 st.sidebar.write("Designegycreatives's [Github Page](https://github.com/Designegycreatives)")
 
 # Image For Page
