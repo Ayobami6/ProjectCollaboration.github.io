@@ -7,7 +7,7 @@ from PIL import Image
 st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
 image_1 = Image.open('image_1.png')
-st.sidebar.write("Ayobami's [image_1](https://github.com/Ayobami6)")
+st.sidebar.write("Ayobami's ![image_1](https://github.com/Ayobami6)")
 st.sidebar.write("Designegycreatives's [Github Page](https://github.com/Designegycreatives)")
 
 # Image For Page
