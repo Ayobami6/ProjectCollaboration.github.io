@@ -9,5 +9,5 @@ click<=8.0
 plotly==5.2.1
 scikit-learn==1.0.1
 pickle-mixin
-base64
+
 
