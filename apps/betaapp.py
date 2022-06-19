@@ -9,14 +9,14 @@ st.sidebar.markdown("💸 Beta Page")
 
 # Adding Github pages
 st.sidebar.markdown("Ayobami's Page [![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6)")
-st.sidebar.markdown("[![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives)")
+st.sidebar.markdown("Anuoluwapo's Page [![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives)")
 # Image For Page
 image = Image.open('image.png')
 st.image(image, caption='Prediction WebApp')
 
 expander_1 = st.expander("ABOUT WEBAPP")
-expander_1.markdown("""<b>This App</b> Can Predict Which Customer Can 
-<b>Repay Or Default On Their Loans</b>. """, unsafe_allow_html=True)
+expander_1.markdown("""<b>This Web Application </b> Can Predict Which Customer Can 
+<b> Repay Or Default On Their Loans</b>. We created this webapp to help reduce the high rate of loan defaults in the financial sector """, unsafe_allow_html=True)
 
 trained_model = pickle.load(
     open('data/trained_model_Loan_Pred.pkl', 'rb'))
