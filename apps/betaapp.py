@@ -6,6 +6,12 @@ import pickle
 st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
 
+# Image For Page
+file_ = open("image.jpg", "rb")
+contents = file_.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
+
 
 trained_model = pickle.load(
     open('data/trained_model_Loan_Pred.pkl', 'rb'))
@@ -27,11 +33,6 @@ def generateprediction(data):
 
 
 def main():
-    # Image For Page
-    file_ = open("image.jpg", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
 
     st.markdown(
         f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
