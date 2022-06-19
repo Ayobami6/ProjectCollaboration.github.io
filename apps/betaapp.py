@@ -7,7 +7,7 @@ st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
 
 # Image For Page
-file_ = open("image.jpg", "rb")
+file_ = open("image.png", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
