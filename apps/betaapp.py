@@ -28,7 +28,7 @@ def generateprediction(data):
 
 def main():
     # Image For Page
-    file_ = open("image1.jpg", "rb")
+    file_ = open("image.jpg", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
