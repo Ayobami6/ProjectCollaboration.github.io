@@ -10,6 +10,7 @@ st.sidebar.markdown("💸 Beta Page")
 # Adding Github pages
 st.sidebar.markdown("Ayobami's Page [![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6)")
 st.sidebar.markdown("Designegy Creative's Page [![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives)")
+st.sidebar.markdown("Project Source Code [![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6/ProjectCollaboration.github.io/edit/master)")
 # Image For Page
 image = Image.open('image.png')
 st.image(image, caption='Prediction WebApp')
