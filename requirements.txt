@@ -8,6 +8,11 @@ pillow-PIL
 click<=8.0
 plotly==5.2.1
 pickle-mixin
+<<<<<<< HEAD
 sklearn==1.0.1
 matplotlib
 seaborn
+=======
+pickle
+scikit-learn==1.0.1
+>>>>>>> 514ba6515154e98f3f6f7436f2c9e795e465ae59
