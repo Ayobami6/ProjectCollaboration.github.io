@@ -8,7 +8,7 @@ st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
 st.sidebar.write("Ayobami's Page") 
 img = Image.open('image_1.png')
-st.button(st.image(img))
+st.sidebar.button(st.image(img))
 st.sidebar.write("Designegycreatives's [Github Page](https://github.com/Designegycreatives)")
 
 # Image For Page
