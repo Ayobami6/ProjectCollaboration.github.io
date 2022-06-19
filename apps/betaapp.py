@@ -8,7 +8,7 @@ st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
 
 # Adding Github pages
-st.sidebar.markdown("[![Ayobami's Page](image_1.png)](https://github.com/Ayobami6)
+st.sidebar.markdown("[![Ayobami's Page](image_1.png)](https://github.com/Ayobami6)")
 st.sidebar.write("Designegycreatives's [Github Page](https://github.com/Designegycreatives)")
 
 # Image For Page
