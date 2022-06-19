@@ -1,17 +1,15 @@
 import streamlit as st
 import base64
 import pickle
+from PIL import Image
 
 
 st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
 
 # Image For Page
-file_ = open("image.png", "rb")
-contents = file_.read()
-data_url = base64.b64encode(contents).decode("utf-8")
-file_.close()
-
+image = Image.open('image.png')
+st.image(image, caption='Prediction WebApp')
 
 trained_model = pickle.load(
     open('data/trained_model_Loan_Pred.pkl', 'rb'))
