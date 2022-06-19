@@ -6,10 +6,16 @@ from PIL import Image
 
 st.header("Loan Prediction App ")
 st.sidebar.markdown("💸 Beta Page")
+st.sidebar.write("Ayobami's [Github Page](https://github.com/Ayobami6)")
+st.sidebar.write("Designegycreatives's [Github Page](https://github.com/Designegycreatives)")
 
 # Image For Page
 image = Image.open('image.png')
 st.image(image, caption='Prediction WebApp')
+
+expander_1 = st.expander("About WebApp")
+expander_1.markdown("""<b>This App</b> Can Predict Which Customer Can 
+<b>Repay Or Default On Their Loans</b>. """, unsafe_allow_html=True)
 
 trained_model = pickle.load(
     open('data/trained_model_Loan_Pred.pkl', 'rb'))
