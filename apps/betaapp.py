@@ -3,22 +3,18 @@ import base64
 import pickle
 from PIL import Image
 
-
-st.header("Loan Prediction App ")
-st.sidebar.markdown("💸 Beta Page")
-
-# Adding Github pages
-st.sidebar.markdown("Ayobami's Page [![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6)")
-st.sidebar.markdown("Project Source Code [![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6/ProjectCollaboration.github.io)")
-st.sidebar.markdown("Designegy Creative's Page [![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives)")
-
+col1, col2 = st.columns(2)
 # Image For Page
 image = Image.open('image.png')
-st.image(image, caption='Prediction WebApp')
 
-expander_1 = st.expander("ABOUT WEBAPP")
-expander_1.markdown("""<b>This Web Application </b> Can Predict If a Customer Can 
-<b> Repay Or Default On Their Loans</b>. \n  We created this webapp to help <b> reduce the high rate of loan defaults </b> in the financial sector. """, unsafe_allow_html=True)
+
+col1.header("Loan Prediction App ")
+col1.write("This Web ApplicationCan Predict If a Customer Can Repay Or Default On Their Loans. \n \n We created this webapp to help reduce the high rate of loan defaults in the financial sector.")
+col1.write("Ayobami's Page [![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6)")
+col1.write("Project Source Code [![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6/ProjectCollaboration.github.io)")
+col1.write("Designegy Creative's Page [![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives)")
+col2.image(image, caption='Prediction WebApp')
+
 
 st.write("Fill in the following details correctly.")
 
