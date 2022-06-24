@@ -10,10 +10,10 @@ image = Image.open('image.png')
 
 col1.header("Loan Prediction App ")
 col1.write("This Web ApplicationCan Predict If a Customer Can Repay Or Default On Their Loans. \n \n We created this webapp to help reduce the high rate of loan defaults in the financial sector.")
-col1.write("Ayobami's Page [![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6)")
+col1.write("Ayobami's Page[![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6)") |
 col1.write("Project Source Code [![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6/ProjectCollaboration.github.io)")
 col1.write("Designegy Creative's Page [![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives)")
-col2.image(image, caption='Prediction WebApp')
+col2.image(image)
 
 
 st.write("Fill in the following details correctly.")
