@@ -10,7 +10,7 @@ image = Image.open('image.png')
 
 col1.header("Loan Prediction App ")
 header = '<p style="font-family:sans-serif; color:Black;">This Web Application can predict if a customer can repay or default on their loans. \n \n We created this webapp to help reduce the high rate of loan defaults in the financial sector.</p>'
-col1.markdown("header, unsafe_allow_html=True")
+col1.markdown(header, unsafe_allow_html=True)
 col1.write("[![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6) Ayobami's Page") 
 col1.write("[![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6/ProjectCollaboration.github.io) Project Source Code")
 col1.write("[![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives) Designegy Creatives's Page")
