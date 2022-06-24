@@ -8,7 +8,7 @@ col1, col2 = st.columns(2)
 image = Image.open('image.png')
 
 
-col1.title("Loan Prediction App ")
+col1.header("Loan Prediction App ")
 col1.write("This Web Application can predict if a customer can repay or default on their loans. \n \n We created this webapp to help reduce the high rate of loan defaults in the financial sector.")
 col1.write("[![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6) Ayobami's Page") 
 col1.write("[![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6/ProjectCollaboration.github.io) Project Source Code")
