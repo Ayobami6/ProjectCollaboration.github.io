@@ -10,7 +10,7 @@ image = Image.open('image.png')
 
 col1.header("Loan Prediction App ")
 col1.write("This Web ApplicationCan Predict If a Customer Can Repay Or Default On Their Loans. \n \n We created this webapp to help reduce the high rate of loan defaults in the financial sector.")
-col1.write("[![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6)") 
+col1.write("[![Ayobami's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6) Ayobami's Page") 
 col1.write("[![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Ayobami6/ProjectCollaboration.github.io)")
 col1.write("[![Designegycreatives's Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/Designegycreatives)")
 col2.image(image)
